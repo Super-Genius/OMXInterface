@@ -33,7 +33,7 @@ endif
 LOCAL_MODULE    := OMXInterface
 LOCAL_SRC_FILES := $(FILE_LIST:$(LOCAL_PATH)/%=%)
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include $(LOCAL_PATH)/../android-source/frameworks/base/include $(LOCAL_PATH)/../android-source/system/core/include $(LOCAL_PATH)/../android-source/frameworks/base/include/media/stagefright/openmax
-LOCAL_LDFLAGS	:= -L../android-libs/ $(LOCAL_LINK_FLAGS)
+LOCAL_LDFLAGS	:= -L../android-libs/system/lib $(LOCAL_LINK_FLAGS)
 LOCAL_LDLIBS	+= -lstagefright -landroid -lutils
 
 include $(BUILD_SHARED_LIBRARY)
